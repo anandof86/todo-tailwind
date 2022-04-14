@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { useState } from "react";
+import { useState,  } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { bindActionCreators } from "redux";
 import { addTodo, updateTodo, deleteTodo, completeTodo } from "../../store/reducer";
@@ -70,13 +70,13 @@ const CreateTodo = (props) => {
                             <label className="block text-gray-700 text-sm font-light mb-2" >
                                 Todo
                             </label>
-                            <input {...register("todo", { required: true })} className="shadow appearance-none border border-gray-200 text-sm rounded w-full py-2 px-3 text-gray-500 leading-tight focus:outline-none focus:shadow-outline" id="todo" type="text" placeholder="Type Here" />
+                            <input defaultValue={defaultvalue.todo}  {...register("todo", { required: true })} className="shadow appearance-none border border-gray-200 text-sm rounded w-full py-2 px-3 text-gray-500 leading-tight focus:outline-none focus:shadow-outline" id="todo" type="text" placeholder="Type Here" />
                         </div>
                         <div className="mb-6">
                             <label className="block text-gray-700 text-sm font-light mb-2" >
                                 Priority
                             </label>
-                            <select {...register("priority", { required: true })} className="shadow appearance-none border border-gray-200 text-sm rounded w-full py-2 px-3 text-gray-500 leading-tight focus:outline-none focus:shadow-outline" type="select" placeholder='Select Priority' >
+                            <select defaultValue={defaultvalue.priority} {...register("priority", { required: true })} className="shadow appearance-none border border-gray-200 text-sm rounded w-full py-2 px-3 text-gray-500 leading-tight focus:outline-none focus:shadow-outline" type="select" placeholder='Select Priority' >
                                 <option>Select Priority</option>
                                 <option value="1">High</option>
                                 <option value="2">Medium</option>
@@ -87,13 +87,13 @@ const CreateTodo = (props) => {
                             <label className="block text-gray-700 text-sm font-light mb-2" >
                                 Due Date
                             </label>
-                            <input {...register("dueDate", { required: true })} className="shadow appearance-none border border-gray-200 text-sm rounded w-full py-2 px-3 text-gray-500 leading-tight focus:outline-none focus:shadow-outline" type="date" placeholder='Due Date' />
+                            <input defaultValue={defaultvalue.dueDate} {...register("dueDate", { required: true })} className="shadow appearance-none border border-gray-200 text-sm rounded w-full py-2 px-3 text-gray-500 leading-tight focus:outline-none focus:shadow-outline" type="date" placeholder='Due Date' />
                         </div>
                         <div className="mb-6">
                             <label className="block text-gray-700 text-sm font-light mb-2">
                                 Assigned To
                             </label>
-                            <select {...register("assignedTo", { required: true })} className="shadow appearance-none border border-gray-200 text-sm rounded w-full py-2 px-3 text-gray-500 leading-tight focus:outline-none focus:shadow-outline" type="select" placeholder='Select Priority' >
+                            <select defaultValue={defaultvalue.assignedTo} {...register("assignedTo", { required: true })} className="shadow appearance-none border border-gray-200 text-sm rounded w-full py-2 px-3 text-gray-500 leading-tight focus:outline-none focus:shadow-outline" type="select" placeholder='Select Priority' >
                                 <option>Select Assigned To</option>
                                 <option>Ramanand Chitravelu</option>
                                 <option>Abinaya Ramanand</option>
